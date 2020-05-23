@@ -1,3 +1,17 @@
+# Setup
+
+Configure:
+src/routes/_config.json
+
+```
+npm install
+
+npm run dev
+or export out to __sapper__/export
+npm run export
+```
+
+------------
 # sapper-template
 
 The default [Sapper](https://github.com/sveltejs/sapper) template, available for Rollup and webpack.

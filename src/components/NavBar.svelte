@@ -1,5 +1,6 @@
 <script>
-  export let segment;	
+  export let segment;
+  export let config;	
   
 </script>
 			
@@ -18,7 +19,7 @@
   <img src="images/google-logo.png" width="113" alt="" class="onvent-logo" />
   <div class="navbar-container w-container">
     <a href="overview" class="w-inline-block w--current">
-      <h1>COLLAB LAND</h1>
+      <h1>{config.name}</h1>
     </a>
     <div class="menu-button w-nav-button">
       <div class="menu-button-icon w-icon-nav-menu" />

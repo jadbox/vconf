@@ -1,4 +1,6 @@
 <script type="text/javascript">
+  import config from './_config.json';
+
   import { onMount } from 'svelte';
   onMount(() => {
     var document = window.document;
@@ -30,36 +32,10 @@
 </script>
 
 <svelte:head>
-  <title>Entrepreneurship Avenue 2020</title>
+  <title>{config.name}</title>
 </svelte:head>
 
 <div class="header-background">
-  <div class="hidden w-container">
-    <div
-      data-collapse="small"
-      data-animation="default"
-      data-duration="300"
-      role="banner"
-      class="navbar site-navigation w-nav">
-      <img src="images/google-logo.png" width="113" alt="" class="onvent-logo" />
-      <div class="navbar-container w-container">
-        <a href="overview" class="w-inline-block">
-          <h1>COLLAB LAND</h1>
-        </a>
-        <div class="menu-button w-nav-button">
-          <div class="menu-button-icon w-icon-nav-menu" />
-        </div>
-        <nav role="navigation" class="nav-menu w-nav-menu">
-          <a href="overview" id="nav-link" class="nav-link nav-left w-nav-link">Overview</a>
-          <a href="/rooms/startup-stage" id="nav-link" class="nav-link w-nav-link">Streams</a>
-          <a href="exhibition" id="nav-link" class="nav-link w-nav-link">Exhibition</a>
-          <a href="networking" id="nav-link" class="nav-link nav-link-right nav-link-right w-nav-link">
-            Socializing
-          </a>
-        </nav>
-      </div>
-    </div>
-  </div>
   <div class="headline-container w-container">
     <img
       src="images/IMGBIN_entrepreneurship-avenue-startup-company-4gamechangers-festival-2018-organization-png_u7J8HQD3.png"
@@ -72,7 +48,7 @@
       class="image" />
     <div class="div-block">
       <h6 class="heading-2">THE CONFERENCE FOR ENTREPRENEURS</h6>
-      <h1 id="headline" class="heading">Conference 2020</h1>
+      <h1 id="headline" class="heading">{config.name}</h1>
       <h5 id="subline" class="subhead-splash">
         Tuesday, JunE 2nd, 2020
         <br />
@@ -82,7 +58,7 @@
       <h5 id="subline2" class="subhead-splash countdown">15 days</h5>
     </div>
     <div />
-    <a href="overview.html" class="button-2 w-button">Enter Conference</a>
+    <a href="overview" class="button-2 w-button">Enter Conference</a>
   </div>
 </div>
 <div class="body-container-splash">

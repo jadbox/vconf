@@ -9,13 +9,14 @@
 </script>
 
 <script>
-	import NavBar from "../components/NavBar.svelte"
-					
+  import config from './_config.json';
+  import NavBar from '../components/NavBar.svelte';
+
   export let agendas;
   // export let segment;
 </script>
 
-<NavBar segment="overview"/>
+<NavBar segment="overview" {config} />
 <div class="body-container">
   <div class="headline-container2 w-container">
     <div class="video-block">
@@ -24,7 +25,7 @@
         id="w-node-0978a16a8c6d-514291e6"
         class="w-embed-youtubevideo youtube">
         <iframe
-          src="https://www.youtube.com/embed/4GSEu5FlnJo?rel=0&amp;controls=1&amp;autoplay=0&amp;mute=0&amp;start=0"
+          src={config.overviewVideo}
           frameborder="0"
           style="position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:auto"
           allow="autoplay; encrypted-media"
@@ -38,56 +39,56 @@
         <br />
       </h1>
       <div class="w-row">
-      {#each ["startup-stage", "startup-stage", "startup-stage", "startup-stage"] as sectionName}
-        <div class="w-col w-col-6">
-          <div>
-            <div class="w-dyn-list">
-              <div class="w-dyn-items">
-                <div class="w-dyn-item">
-                  <a href="#link" class="link-block-4 w-inline-block w-clearfix">
-                    <h1 class="heading-4-link">title</h1>
-                  </a>
+        {#each ['startup-stage', 'startup-stage', 'startup-stage', 'startup-stage'] as sectionName}
+          <div class="w-col w-col-6">
+            <div>
+              <div class="w-dyn-list">
+                <div class="w-dyn-items">
+                  <div class="w-dyn-item">
+                    <a href="#link" class="link-block-4 w-inline-block w-clearfix">
+                      <h1 class="heading-4-link">title</h1>
+                    </a>
+                  </div>
                 </div>
-              </div>
-              <!--<div class="w-dyn-empty">
+                <!--<div class="w-dyn-empty">
                 <div>No items found.</div>
               </div>!-->
-            </div>
-            <div class="w-dyn-list">
-              <div class="agendagrid w-dyn-items">
-                {#each agendas as item}
-                  {#if item.Room === 'startup-stage'}
-                    <div class="collection-item-2 w-dyn-item">
-                      <div class="collection-agenda-item">
-                        <div data-hover="1" data-delay="0" class="dropdown w-dropdown">
-                          <div class="dropdown-toggle w-dropdown-toggle">
-                            <div class="dropdownarrow w-icon-dropdown-toggle" />
-                            <div class="div-block-11 w-clearfix">
-                              <div class="agenda-item-subsection" />
-                              <div class="agenda-item-subsection-title">{item.Name}</div>
-                              <div class="agenda-item-subsection roomlabel" />
-                            </div>
-                          </div>
-                          <nav class="dropdown-list w-dropdown-list">
-                            <div class="agenda-info-card">
-                              <div>
-                                <strong>Description</strong>
+              </div>
+              <div class="w-dyn-list">
+                <div class="agendagrid w-dyn-items">
+                  {#each agendas as item}
+                    {#if item.Room === 'startup-stage'}
+                      <div class="collection-item-2 w-dyn-item">
+                        <div class="collection-agenda-item">
+                          <div data-hover="1" data-delay="0" class="dropdown w-dropdown">
+                            <div class="dropdown-toggle w-dropdown-toggle">
+                              <div class="dropdownarrow w-icon-dropdown-toggle" />
+                              <div class="div-block-11 w-clearfix">
+                                <div class="agenda-item-subsection" />
+                                <div class="agenda-item-subsection-title">{item.Name}</div>
+                                <div class="agenda-item-subsection roomlabel" />
                               </div>
-                              <p class="paragraph-3" />
                             </div>
-                          </nav>
+                            <nav class="dropdown-list w-dropdown-list">
+                              <div class="agenda-info-card">
+                                <div>
+                                  <strong>Description</strong>
+                                </div>
+                                <p class="paragraph-3" />
+                              </div>
+                            </nav>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  {/if}
-                {/each}
-              </div>
-              <!--<div class="w-dyn-empty">
+                    {/if}
+                  {/each}
+                </div>
+                <!--<div class="w-dyn-empty">
               <div>No sessions</div>
             </div>!-->
+              </div>
             </div>
           </div>
-        </div>
         {/each}
       </div>
     </div>

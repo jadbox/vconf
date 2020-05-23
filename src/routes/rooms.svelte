@@ -9,13 +9,14 @@
 </script>
 
 <script>
-    import NavBar from '../components/NavBar.svelte';
+  import config from './_config.json';
+  import NavBar from '../components/NavBar.svelte';
   export let agendas;
-  export let segment;
+  // export let segment;
 </script>
 
 <div>
-  <NavBar segment="rooms"/>
+  <NavBar segment="rooms" {config} />
   <div data-collapse="none" data-animation="default" data-duration="400" role="banner" class="navbar-sub w-nav">
     <div class="container-3 w-container">
       <nav role="navigation" class="sub-menu-copy w-nav-menu">
@@ -46,7 +47,7 @@
           title="video"
           width="100%"
           style="min-height:420px"
-          src="https://www.youtube.com/embed/OP0tKUzhVc0"
+          src="{config.streamVideo}"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen />
@@ -99,7 +100,7 @@
                       <div>
                         <strong>Description</strong>
                       </div>
-                      <p class="paragraph-3">{item["Short Description"]}</p>
+                      <p class="paragraph-3">{item['Short Description']}</p>
                     </div>
                   </nav>
                 </div>
