@@ -13,9 +13,9 @@
   <slot {segment} />
 
   <div class="section">
-    <a href="/tables/reception" class="w-button">Help</a>
+    <!--<a href="/tables/reception" class="w-button">Help</a>!-->
     <div class="div-block-18">
-      <a href="https://www.onvent.at" target="_blank" class="link">Like this platform? Learn more about Onvent now!</a>
+      <a href="https://collab.land/" target="_blank" class="link">Like this platform? Learn more about Collab.Land now!</a>
     </div>
   </div>
   </div>
