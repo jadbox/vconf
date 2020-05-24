@@ -1,13 +1,3 @@
-<script context="module">
-  export function preload({ params, query }) {
-    return this.fetch(`./agenda.json`)
-      .then(r => r.json())
-      .then(agendas => {
-        return { agendas };
-      });
-  }
-</script>
-
 <script>
   import config from './_config.json';
   import NavBar from '../components/NavBar.svelte';
